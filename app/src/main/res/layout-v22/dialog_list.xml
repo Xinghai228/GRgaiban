@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/layout_batch_process" android:padding="8.0dip" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <EditText android:id="@id/one_click_setup" android:padding="12.0dip" android:layout_width="120.0dip" android:layout_height="50.0dip" android:minHeight="50.0dip" android:hint="@string/one_click_setup" android:layout_centerVertical="true" android:inputType="number" android:layout_alignParentStart="true" android:autofillHints="number" />
+        <Button android:textColor="@color/button" android:id="@id/btn_select_all" android:background="@drawable/button" android:padding="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="50.0dip" android:text="@string/select_all" android:layout_centerVertical="true" android:textAllCaps="false" android:layout_marginStart="8.0dip" android:layout_toEndOf="@id/one_click_setup" />
+        <Button android:textColor="@color/button" android:id="@id/btn_select_invert" android:background="@drawable/button" android:padding="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="50.0dip" android:text="@string/select_invert" android:layout_centerVertical="true" android:textAllCaps="false" android:layout_marginStart="8.0dip" android:layout_toEndOf="@id/btn_select_all" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/layout_fw_filter" android:paddingTop="6.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="12.0dip" android:paddingEnd="12.0dip">
+            <CheckBox android:id="@id/cb_filter_shield" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="只看保护罩" />
+            <CheckBox android:id="@id/cb_filter_dontcollect" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:text="显示不收取好友" android:layout_marginStart="16.0dip" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingBottom="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="12.0dip" android:paddingEnd="12.0dip">
+            <TextView android:id="@id/tv_fw_energy_field" android:background="?selectableItemBackground" android:padding="8.0dip" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="48.0dip" android:text="周收" />
+            <TextView android:id="@id/tv_fw_energy_cmp" android:background="?selectableItemBackground" android:padding="8.0dip" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="48.0dip" android:text="以内" />
+            <EditText android:id="@id/et_fw_energy_value" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="数值" android:singleLine="true" android:layout_weight="1.0" android:inputType="number" />
+        </LinearLayout>
+    </LinearLayout>
+    <ListView android:id="@id/lv_list" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" android:fastScrollEnabled="true" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <EditText android:id="@id/edt_find" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="@string/search" android:layout_weight="1.0" />
+        <Button android:textColor="@color/button" android:id="@id/btn_find_last" android:background="@drawable/button" android:padding="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="50.0dip" android:text="@string/last" android:textAllCaps="false" />
+        <Button android:textColor="@color/button" android:id="@id/btn_find_next" android:background="@drawable/button" android:padding="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="50.0dip" android:text="@string/next" android:textAllCaps="false" />
+    </LinearLayout>
+</LinearLayout>
